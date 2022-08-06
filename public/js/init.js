@@ -1,0 +1,1 @@
+document.getElementById("top-placeholder").style.height = document.getElementById("top").offsetHeight + "px";

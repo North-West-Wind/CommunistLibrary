@@ -1,0 +1,104 @@
+body {
+	font-family: 'OdinRounded', Helvetica, sans-serif;
+	color: white;
+	background-color: rgb(44, 44, 44);
+	touch-action: manipulation;
+	overscroll-behavior-y: contain;
+	padding: 0;
+}
+
+hr {
+	margin: 10vh;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#banner-text {
+	animation: fadeInFromUp 1s ease;
+	transition: all .25s;
+}
+
+h1#banner-text {
+	font-size: 4vw;
+	text-align: center;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+}
+
+h2#banner-text {
+	font-size: 2vw;
+	text-align: center;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+}
+
+@keyframes fadeInFromUp {
+	0% {
+		opacity: 0;
+		transform: translateY(-2vw);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+#top {
+	width: 100%;
+	min-height: 30vh;
+	top: 0;
+	left: 0;
+	padding-bottom: 4vw;
+	position: fixed;
+	animation: fadeInFromUp 1s ease;
+	transition: all .25s;
+}
+
+#top-placeholder {
+	width: 100%;
+}
+
+.topbar {
+	width: fit-content;
+	background-color: lightslategray;
+	margin: auto;
+	border-radius: 5%;
+	padding: 0.5vw 0 0.5vw 0;
+}
+
+.topbar a {
+	font-size: 1vw;
+	transition: all .25s;
+	padding: 0.5vw 1vw 0.5vw 1vw;
+	border-radius: 5%;
+}
+
+.topbar a:hover {
+	background-color: lightblue;
+}
+
+html:not([data-scroll='0']) #top {
+	min-height: auto;
+	padding-bottom: 2vw;
+}
+
+html:not([data-scroll='0']) h1#banner-text {
+	font-size: 2vw;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
+}
+
+html:not([data-scroll='0']) h2#banner-text {
+	font-size: 1vw;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
+}
